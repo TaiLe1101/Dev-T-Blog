@@ -1,17 +1,40 @@
 import { Row } from 'antd';
 import { Col } from 'antd/es/grid';
 import classNames from 'classnames/bind';
-import CardCategory from '~/components/CardCategory';
-import PostCard from '~/components/PostCard';
-import SideBar from '~/components/SideBar';
+import { useEffect, useState } from 'react';
 
+import CardCategory from '~/components/CardCategory';
+import { PropsTypePostCard } from '~/components/PostCard/interfaces';
+import SideBar from '~/components/SideBar';
 import styles from './Home.module.scss';
+import SpacePost from './SpacePost';
 import { postCardList } from './store';
+import Pagination from '~/components/Pagination';
 
 const cx = classNames.bind(styles);
 
 function Home() {
   document.title = 'Home Page';
+
+  const [post] = useState<PropsTypePostCard[]>(postCardList);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postPerPage] = useState<number>(3);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  const indexOfLastPost = currentPage * postPerPage;
+  const indexOfFistPost = indexOfLastPost - postPerPage;
+  const currentPost = post.slice(indexOfFistPost, indexOfLastPost);
+
+  const handlePaginate = (pageNumber: number) => {
+    window.scrollTo({ top: 210, behavior: 'smooth' });
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <div className={cx('wrapper')}>
@@ -20,23 +43,10 @@ function Home() {
           <div className={cx('wrapper-status')}>
             <Row gutter={[32, 32]}>
               <Col span={24} lg={{ span: 16 }}>
-                <Row gutter={[32, 32]}>
-                  {postCardList.map((card, index) => {
-                    return (
-                      <Col key={index} span={24} lg={{ span: 24 }}>
-                        <PostCard
-                          dateTime={card.dateTime}
-                          desc={card.desc}
-                          title={card.title}
-                          titleImg={card.titleImg}
-                          userName={card.userName}
-                          image={card.image}
-                          swap={card.swap}
-                        ></PostCard>
-                      </Col>
-                    );
-                  })}
-                </Row>
+                <div className={cx('wrapper-post')}>
+                  <SpacePost listPost={currentPost} loading={loading}></SpacePost>
+                  <Pagination postPerPage={postPerPage} totalPost={post.length} paginate={handlePaginate}></Pagination>
+                </div>
               </Col>
               <Col span={24} lg={{ span: 8 }}>
                 <div className={cx('sidebar')}>

@@ -4,9 +4,9 @@ import styles from './Author.module.scss';
 
 const cx = classNames.bind(styles);
 
-interface PropsType {}
+function Author() {
+  document.title = 'Author page';
 
-function Author({}: PropsType) {
   return <div className={cx('wrapper')}>Author component</div>;
 }
 

@@ -27,4 +27,12 @@ export const postCardList: PropsTypePostCard[] = [
     userName: 'Lê Trần Tấn Tài',
     image: 'https://picsum.photos/1000',
   },
+  {
+    title: 'Một ngày phượt cùng team Dev',
+    dateTime: 'Thứ hai, 20, 2022',
+    desc: 'Một chuyến đi thật ý nghĩa tuy hơi mệt một xíu thôi haha!',
+    titleImg: "Day's 2",
+    userName: 'Lê Trần Tấn Tài',
+    image: 'https://picsum.photos/1000',
+  },
 ];

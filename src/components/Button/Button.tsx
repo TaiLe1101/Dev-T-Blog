@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import routes from '../../configs/routes';
 
 import styles from './Button.module.scss';
 
@@ -10,10 +9,12 @@ interface PropsType {
   primary?: boolean;
   solid?: boolean;
   className?: string;
-  children: string;
+  children: string | number;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  to?: string;
 }
 
-function Button({ primary = true, solid = false, className = '', children }: PropsType) {
+function Button({ primary = true, solid = false, className = '', children, onClick, to = '#' }: PropsType) {
   const classes = cx('btn', {
     primary,
     solid,
@@ -22,8 +23,8 @@ function Button({ primary = true, solid = false, className = '', children }: Pro
 
   return (
     <div className={cx('wrapper')}>
-      <button className={classes}>
-        <Link to={routes.home} className={cx('content')}>
+      <button className={classes} onClick={onClick}>
+        <Link to={to} className={cx('content')}>
           {children}
         </Link>
       </button>
