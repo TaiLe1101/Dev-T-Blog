@@ -14,18 +14,16 @@ function Navigation({ list }: PropsType) {
   return (
     <div className={cx('wrapper')}>
       <nav className={cx('wrapper-nav')}>
-        {list.map((nav) => {
+        {list.map((navigation) => {
           return (
             <NavLink
-              key={nav.id}
-              to={nav.link}
+              key={navigation.id}
+              to={navigation.link}
               className={(nav) => {
-                console.log('nav ->', nav);
-
                 return cx('nav-item', { active: nav.isActive });
               }}
             >
-              {nav.name}
+              {navigation.name}
             </NavLink>
           );
         })}

@@ -51,7 +51,7 @@ function PostCard({ image = '', dateTime, userName, titleImg, title, desc, swap 
         </div>
 
         <h1 className="gradient-effect">
-          <Link className={cx('link-title')} to={routes.homePage}>
+          <Link className={cx('link-title')} to={routes.home}>
             {title}
           </Link>
         </h1>

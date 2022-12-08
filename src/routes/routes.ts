@@ -1,20 +1,22 @@
-import routes from '../configs/routes';
-import Author from '../pages/Author';
-import ClassicPost from '../pages/ClassicPost';
-import Home from '../pages/Home';
 import { Routes } from './interfaces';
+
+import configs from '~/configs';
+import Author from '../pages/Author';
+import Blog from '../pages/Blog';
+import Home from '../pages/Home';
 
 const publicRoutes: Routes[] = [
   {
-    path: routes.homePage,
+    path: configs.routes.home,
     component: Home,
   },
   {
-    path: routes.classicPostPage,
-    component: ClassicPost,
+    path: configs.routes.blog,
+    component: Blog,
   },
+
   {
-    path: routes.author,
+    path: configs.routes.author,
     component: Author,
   },
 ];

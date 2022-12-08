@@ -1,7 +1,7 @@
 const routes = {
-  homePage: '/',
-  classicPostPage: '/classic-post',
-  author: '/author/@:username',
+  home: '/',
+  blog: '/blog',
+  author: '/author/@taileee',
 };
 
 export default routes;

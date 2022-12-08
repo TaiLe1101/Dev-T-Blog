@@ -1,25 +1,20 @@
-import routes from '~/configs/routes';
+import configs from '~/configs';
 import { NavList } from '~/interfaces';
 
 export const navList: NavList[] = [
   {
     id: 1,
     name: 'Home',
-    link: routes.homePage,
+    link: configs.routes.home,
   },
   {
     id: 2,
-    name: 'FullWidth Post',
-    link: '/fullWidth-post',
+    name: 'Blog',
+    link: configs.routes.blog,
   },
   {
     id: 3,
-    name: '#Tag',
-    link: '/@:tag',
-  },
-  {
-    id: 4,
     name: 'Author',
-    link: routes.author,
+    link: configs.routes.author,
   },
 ];

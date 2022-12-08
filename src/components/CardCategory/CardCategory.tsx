@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import { ModifierAmountCircle } from '../../interfaces';
 import AmountCircle from '../AmountCircle';
 
@@ -16,7 +17,9 @@ function CardCategory({ gettingStarted, technology, lifeStyle, places, health }:
         alt=""
         className={cx('img')}
       />
-      <span className={cx('tag')}>Korean</span>
+      <Link to="/tag/@korean" className={cx('tag')}>
+        Korean
+      </Link>
       <AmountCircle gettingStarted className={cx('tag-amount')}>
         3
       </AmountCircle>

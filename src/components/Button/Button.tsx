@@ -23,7 +23,7 @@ function Button({ primary = true, solid = false, className = '', children }: Pro
   return (
     <div className={cx('wrapper')}>
       <button className={classes}>
-        <Link to={routes.homePage} className={cx('content')}>
+        <Link to={routes.home} className={cx('content')}>
           {children}
         </Link>
       </button>
