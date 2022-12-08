@@ -1,5 +1,5 @@
-import { PropsTypeTagItem } from '../../../components/CategoryItem/interfaces';
-import { PropsTypeCardCircle } from '../../../components/PostCardCircle/interfaces';
+import { PropsTypeTagItem } from '../CategoryItem/interfaces';
+import { PropsTypeCardCircle } from '../PostCardCircle/interfaces';
 
 export const PostCardCircleList: PropsTypeCardCircle[] = [
   {

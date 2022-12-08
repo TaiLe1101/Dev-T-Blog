@@ -6,7 +6,7 @@ import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
 
 import styles from './PostCard.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import routes from '../../configs/routes';
 import Button from '../Button';
 import { PropsTypePostCard } from './interfaces';
@@ -35,11 +35,12 @@ function PostCard({ image = '', dateTime, userName, titleImg, title, desc, swap 
             <FontAwesomeIcon className={cx('icon')} icon={faCalendar}></FontAwesomeIcon>
             <span className={cx('text')}>{dateTime}</span>
           </div>
+
           <div className={cx('info-tus')}>
             <FontAwesomeIcon className={cx('icon')} icon={faUser}></FontAwesomeIcon>
-            <Link to="/id" className={cx('text')}>
+            <NavLink to="/author/@taileee" className={cx('text')}>
               {userName}
-            </Link>
+            </NavLink>
           </div>
 
           <Tippy content="0 comment" theme={'dark'}>

@@ -23,6 +23,7 @@
   letter-spacing: 1px;
 
   &.active {
+    opacity: 1;
     &::after {
       width: 100%;
     }

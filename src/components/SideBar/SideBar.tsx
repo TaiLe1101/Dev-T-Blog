@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
-import CategoryItem from '../../../components/CategoryItem';
-import PostCardCircle from '../../../components/PostCardCircle';
-import TitleBar from '../../../components/TitleBar';
+import CategoryItem from '../CategoryItem';
+import PostCardCircle from '../PostCardCircle';
+import TitleBar from '../TitleBar';
 
 import styles from './SideBar.module.scss';
 import { PostCardCircleList, TagList } from './store';

@@ -1,7 +1,6 @@
 import { Col, Row } from 'antd';
 import classNames from 'classnames/bind';
 import Header from '../components/Header';
-import SideBar from '../components/SideBar';
 
 import styles from './DefaultLayout.module.scss';
 
@@ -20,11 +19,8 @@ function DefaultLayout(props: PropsType) {
       <div className={cx('content')}>
         <div className="container">
           <Row gutter={[32, 32]}>
-            <Col span={24} lg={{ span: 16 }}>
+            <Col span={24} lg={{ span: 24 }}>
               <div className={cx('content-inner')}>{children}</div>
-            </Col>
-            <Col span={24} lg={{ span: 8 }}>
-              <SideBar />
             </Col>
           </Row>
         </div>

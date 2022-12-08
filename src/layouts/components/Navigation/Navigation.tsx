@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { NavLink } from 'react-router-dom';
-import { NavList } from '../../../interfaces';
+import { NavList } from '~/interfaces';
 
 import styles from './Navigation.module.scss';
 
@@ -20,6 +20,8 @@ function Navigation({ list }: PropsType) {
               key={nav.id}
               to={nav.link}
               className={(nav) => {
+                console.log('nav ->', nav);
+
                 return cx('nav-item', { active: nav.isActive });
               }}
             >
