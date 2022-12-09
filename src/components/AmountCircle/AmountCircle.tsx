@@ -1,16 +1,24 @@
 import classNames from 'classnames/bind';
-import { ModifierAmountCircle } from '../../interfaces';
+import { ModifierAmountCircle } from '~/interfaces';
 
 import styles from './AmountCircle.module.scss';
 
 const cx = classNames.bind(styles);
 
-interface PropsType extends ModifierAmountCircle {
+interface PropsTypeAmountCircle extends ModifierAmountCircle {
   children: string | number;
   className?: string;
 }
 
-function AmountCircle({ className = '', children, gettingStarted, technology, lifeStyle, places, health }: PropsType) {
+function AmountCircle({
+  className = '',
+  children,
+  gettingStarted,
+  technology,
+  lifeStyle,
+  places,
+  health,
+}: PropsTypeAmountCircle) {
   const classes = cx('number', {
     'getting-started': gettingStarted,
     technology: technology,

@@ -10,6 +10,7 @@ import { Link, NavLink } from 'react-router-dom';
 import routes from '../../configs/routes';
 import Button from '../Button';
 import { PropsTypePostCard } from './interfaces';
+import TagCloud from '../TagCloud';
 
 const cx = classNames.bind(styles);
 
@@ -23,10 +24,7 @@ function PostCard({ image = '', dateTime, userName, titleImg, title, desc, swap 
       <div className={cx('wrapper-img')}>
         <img className={cx('img-post')} src={image} alt="" />
 
-        <Link to="/" className={cx('title-img')}>
-          <FontAwesomeIcon className={cx('icon-title-img')} icon={faCircle}></FontAwesomeIcon>
-          {titleImg}
-        </Link>
+        <TagCloud tag={titleImg} className={cx('title-img')}></TagCloud>
       </div>
 
       <div className={cx('wrapper-content')}>

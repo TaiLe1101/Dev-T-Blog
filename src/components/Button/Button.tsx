@@ -14,7 +14,7 @@ interface PropsType {
   to?: string;
 }
 
-function Button({ primary = true, solid = false, className = '', children, onClick, to = '#' }: PropsType) {
+function Button({ primary = true, solid, className = '', children, onClick, to = '#' }: PropsType) {
   const classes = cx('btn', {
     primary,
     solid,

@@ -19,9 +19,10 @@ function Pagination({ postPerPage, totalPost, paginate }: PropsType) {
   }
   return (
     <div className={cx('wrapper')}>
-      {pageNumbers.map((number) => {
+      {pageNumbers.map((number, index) => {
         return (
           <Button
+            key={index}
             onClick={() => {
               paginate(number);
             }}
