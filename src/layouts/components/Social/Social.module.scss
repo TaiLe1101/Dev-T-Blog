@@ -2,9 +2,11 @@
   height: 2px;
   background: var(--primary-gradient);
   margin-bottom: 50px;
+  display: flex;
 }
 
-.social-inner {
+.social-inner,
+.login-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,4 +32,16 @@
   &:hover {
     transform: translateY(-2px);
   }
+}
+
+.login-inner {
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+
+.wrapper-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
