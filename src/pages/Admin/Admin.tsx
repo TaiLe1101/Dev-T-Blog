@@ -7,6 +7,7 @@ const cx = classNames.bind(styles);
 interface PropsTypeAdmin {}
 
 function Admin({}: PropsTypeAdmin) {
+  document.title = 'Admin Page';
   return <div className={cx('wrapper')}>Admin component</div>;
 }
 

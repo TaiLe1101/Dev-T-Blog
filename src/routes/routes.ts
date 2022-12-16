@@ -27,6 +27,9 @@ const publicRoutes: Routes[] = [
     component: Login,
     layout: LoginLayout,
   },
+];
+
+const privateRoutes: Routes[] = [
   {
     path: configs.routes.admin,
     component: Admin,
@@ -34,4 +37,4 @@ const publicRoutes: Routes[] = [
   },
 ];
 
-export { publicRoutes };
+export { publicRoutes, privateRoutes };
