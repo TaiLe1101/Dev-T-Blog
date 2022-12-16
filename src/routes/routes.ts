@@ -6,6 +6,8 @@ import Blog from '../pages/Blog';
 import Home from '../pages/Home';
 import Login from '~/pages/Login';
 import LoginLayout from '~/layouts/LoginLayout';
+import AdminLayout from '~/layouts/AdminLayout';
+import Admin from '~/pages/Admin';
 
 const publicRoutes: Routes[] = [
   {
@@ -24,6 +26,11 @@ const publicRoutes: Routes[] = [
     path: configs.routes.login,
     component: Login,
     layout: LoginLayout,
+  },
+  {
+    path: configs.routes.admin,
+    component: Admin,
+    layout: AdminLayout,
   },
 ];
 

@@ -21,19 +21,6 @@
   background-image: var(--primary-gradient);
 }
 
-.icon {
-  padding: 5px;
-
-  font-size: 2rem;
-
-  color: var(--white-color);
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-}
-
 .login-inner {
   align-items: center;
   justify-content: center;

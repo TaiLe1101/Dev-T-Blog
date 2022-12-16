@@ -11,6 +11,8 @@ interface PropsType {
 }
 
 function Navigation({ list }: PropsType) {
+  const currentUser = true;
+
   return (
     <div className={cx('wrapper')}>
       <nav className={cx('wrapper-nav')}>
@@ -27,6 +29,16 @@ function Navigation({ list }: PropsType) {
             </NavLink>
           );
         })}
+        {currentUser && (
+          <NavLink
+            to="/admin"
+            className={(nav) => {
+              return cx('nav-item', { active: nav.isActive });
+            }}
+          >
+            Admin
+          </NavLink>
+        )}
       </nav>
     </div>
   );

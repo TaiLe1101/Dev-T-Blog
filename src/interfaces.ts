@@ -11,3 +11,10 @@ export interface ModifierAmountCircle {
   places?: boolean;
   health?: boolean;
 }
+
+export interface CurrentUser {
+  id?: string;
+  firstName?: string;
+  lastName?: string;
+  userName?: string;
+}
